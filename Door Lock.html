@@ -1,21 +1,33 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-	<base href="http://192.168.0.9:12345" target="_blank">
 	<meta charset="utf-8" />
 	<title>Door Lock test</title>
+	<link rel="stylesheet" href="/example/import.css" type="text/css">
+ <link rel='shortcut icon' type='image/x-icon' href='/favicon2.ico' />
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ <script type="text/javascript">
+ $(window).load(function() {
+ $(".loader").fadeOut("slow");
+})
+</script>
+
 </head>
 <body>
+	<div class="loader"></div>
 	<header>
 		<h1>Door Lock Remote Control</h1>
-	</header> 
-	
-	<form>
-		<a href="https://appr.tc/r/436144197"><INPUT type='BUTTON' value='connect'></a>
-		<INPUT type='BUTTON' value='open'>
-		<INPUT type='BUTTON' value='close'>
+	</header>
+<form action='http://localhost/Door%20Lock.html' >
+	<p><input type='hidden' name='pinD2' value='0'>
+		 <input type='submit' value='Off' onclick="$('#lg2').show();"/>
 	 </form>
-
+	 <form action='http://localhost/Door%20Lock.html'>
+		 <input type='hidden' name='pinD2' value='1'>
+		 <input type='submit' value='On' onclick="$('#lg2').show();"/>
+	 </form>
+	 <img id="lg2" style="display:none;" src="i.gif" alt="" />
+ </div>
 </body>
 
 </html>
